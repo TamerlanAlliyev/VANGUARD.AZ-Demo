@@ -219,12 +219,94 @@ decreaseBtns.forEach(btn => {
 
 /* =========== SLIDER - START =========== */
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   var sliderLeftBtn = document.querySelector('.slider-left-btn');
+//   var sliderRightBtn = document.querySelector('.slider-right-btn');
+//   var slider = document.querySelector('.sliders');
+//   var slides = document.querySelectorAll('.sliders .slide');
+//   var slideCount = slides.length;
+
+//   var currentSlide = 0; 
+
+//   var sliderCircleBtnContainer = document.querySelector('.slider-cricle-btn');
+
+//   for (var i = 0; i < slideCount; i++) {
+//     var circleBtn = document.createElement('div');
+//     circleBtn.classList.add('cricle-btn');
+//     circleBtn.setAttribute('data-slide-index', i);
+//     sliderCircleBtnContainer.appendChild(circleBtn);
+//   }
+
+//   var sliderCircleBtns = document.querySelectorAll('.slider-cricle-btn .cricle-btn');
+//   sliderCircleBtns.forEach(function (circleBtn, index) {
+//     circleBtn.addEventListener('click', function () {
+//       goToSlide(index); 
+//     });
+//   });
+
+//   slides[0].classList.add('active');
+//   sliderCircleBtns[0].classList.add('active');
+
+//   if (slideCount <= 1) {
+//     sliderLeftBtn.style.display = "none";
+//     sliderRightBtn.style.display = "none";
+//   }
+
+//   function moveSlider(direction) {
+//     const slideWidthPercent = 100 / slideCount; 
+//     let newTranslatePercent = currentSlide * -100;
+
+//     if (direction === 'left') {
+//       currentSlide = (currentSlide === 0) ? slideCount - 1 : currentSlide - 1; 
+//     } else if (direction === 'right') {
+//       currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1; 
+//     }
+
+//     newTranslatePercent = currentSlide * -100; 
+
+//     slider.style.transform = `translateX(${newTranslatePercent}%)`; 
+
+//     updateCircleButtons();
+//   }
+
+//   function goToSlide(slideIndex) {
+//     currentSlide = slideIndex;
+//     moveSlider('stay'); 
+//   }
+
+//   function updateCircleButtons() {
+//     sliderCircleBtns.forEach(function (circleBtn) {
+//       circleBtn.classList.remove('active');
+//     });
+//     sliderCircleBtns[currentSlide].classList.add('active');
+//   }
+
+//   sliderLeftBtn.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     moveSlider('left');
+//   });
+
+//   sliderRightBtn.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     moveSlider('right');
+//   });
+
+//   window.addEventListener('resize', function () {
+//     moveSlider('stay');
+//   });
+// });
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  var sliderLeftBtn = document.querySelector('.slider-left-btn');
-  var sliderRightBtn = document.querySelector('.slider-right-btn');
   var slider = document.querySelector('.sliders');
   var slides = document.querySelectorAll('.sliders .slide');
   var slideCount = slides.length;
+
+  var startX = 0; 
+  var currentX = 0; 
+  var threshold = 100;
 
   var currentSlide = 0; 
 
@@ -281,20 +363,49 @@ document.addEventListener('DOMContentLoaded', function () {
     sliderCircleBtns[currentSlide].classList.add('active');
   }
 
-  sliderLeftBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    moveSlider('left');
+  slider.addEventListener('mousedown', function (event) {
+    startX = event.clientX;
+    slider.style.transition = 'none'; 
   });
 
-  sliderRightBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    moveSlider('right');
+  slider.addEventListener('mousemove', function (event) {
+    currentX = event.clientX;
+  });
+
+  slider.addEventListener('mouseup', function (event) {
+    var deltaX = startX - currentX;
+    slider.style.transition = 'transform 0.5s ease'; 
+
+    if (deltaX > threshold) {
+      moveSlider('right');
+    } else if (deltaX < -threshold) {
+      moveSlider('left');
+    }
   });
 
   window.addEventListener('resize', function () {
     moveSlider('stay');
   });
+
+  var autoSlideInterval = setInterval(function () {
+    moveSlider('right');
+  }, 5000);
+
+  slider.addEventListener('mouseenter', function () {
+    clearInterval(autoSlideInterval);
+  });
+
+  slider.addEventListener('mouseleave', function () {
+    autoSlideInterval = setInterval(function () {
+      moveSlider('right');
+    }, 5000);
+  });
 });
+
+
+
+
+
 
 
 
