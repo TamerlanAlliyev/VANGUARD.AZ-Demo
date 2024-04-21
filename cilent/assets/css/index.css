@@ -185,6 +185,7 @@ header .header-info .page-list .pages-pc ul {
     margin-top: 4px;
     width: 100%;
     position: absolute;
+    z-index: 100;
 }
 
 .searchs .search-list input {
@@ -355,6 +356,23 @@ header .header-info .page-list .pages-pc ul {
 }
 
 
+/* .user-info ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.user-info ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+} */
 
 
 
@@ -376,7 +394,30 @@ header .header-info .page-list .pages-pc ul {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+    position: relative;
 }
+
+
+.searchs .pages-mobile ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.searchs .pages-mobile ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+
+
 
 
 .pages-close {
@@ -415,7 +456,7 @@ header .header-info .page-list .pages-pc ul {
     overflow-y: auto;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
     display: none;
-    padding: 18px;
+    padding: 24px;
     right: -50px;
     opacity: 0.3;
     transition: right 0.7s ease, opacity 0.5s ease;
@@ -523,26 +564,7 @@ header .header-info .page-list .pages-pc ul {
     color: #3c3c3c;
 }
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail .basket-prod-count {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail .basket-prod-count input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-inner-spin-button,
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-outer-spin-button,
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-clear-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
 
 .searchs .basket-list .basket-product-list ul .basket-prod {
@@ -1251,6 +1273,7 @@ header .header-info .page-list .pages-pc ul {
 
     .searchs .basket-list {
         width: 30%;
+        padding:24px 36px;
     }
 
     /* =================================
@@ -1732,7 +1755,7 @@ header .header-info .page-list .pages-pc ul {
     /* =========== SLIDER-Info - Start =========== */
     
     .slide-info {
-        top: 34%;
+        top: 44%;
         padding: 20px;
     }
     
