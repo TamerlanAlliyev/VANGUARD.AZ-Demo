@@ -16,20 +16,38 @@ a {
 }
 
 
+.header-info {
+    background: transparent;
+}
+
+
+.header-info.scrolled {
+    background-color: #000000;
+}
+
+
+
 /*=============== LOGIN ===============*/
 .login {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url(/cilent/assets/images/products/slider-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 .login-form {
-    border: 1.5px solid #bcbcbc;
+    border: 1.5px solid #ffffff74;
     margin-inline: 1.5rem;
     padding: 38px 35px;
     max-width: 500px;
     width: 100%;
+    background-color: hsla(0, 0%, 10%, 0.456);
+    backdrop-filter: blur(8px);
+    color: #fff;
 }
 
 .login-title {
@@ -40,6 +58,7 @@ a {
 .login-content,
 .login-box {
     display: grid;
+    font-size: 12px;
 }
 
 .login-content {
@@ -51,7 +70,7 @@ a {
     grid-template-columns: max-content 1fr;
     align-items: center;
     column-gap: 12px;
-    border-bottom: 1.5px solid #000000;
+    border-bottom: 1.5px solid #fff;
 }
 
 .login-icon {
@@ -60,15 +79,13 @@ a {
 
 .login-input {
     width: 100%;
-    padding-block: 0.8rem;
+    padding-block: 0.6rem;
     background: none;
     position: relative;
     z-index: 1;
+    color: #fff;
 }
 
-.login-box-input {
-    position: relative;
-}
 
 .login-label {
     position: absolute;
@@ -101,15 +118,13 @@ a {
     column-gap: 0.5rem;
 }
 
-.login-check-label{
+.login-check-label {
     font-size: 14px;
 }
 
 .login-check-input {
-    /* width: 16px;
-    height: 16px; */
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
 }
 
 
@@ -119,13 +134,14 @@ a {
     cursor: pointer;
     margin-bottom: 18px;
     /* margin-bottom: 32px; */
-    background: #000;
+    background: #ffffff;
     border: none;
-    color: #fff;
+    color: #000000;
     transition: all 0.5s ease;
 }
 
 .login-button:hover {
+    color: #fff;
     background-color: #d90000;
 }
 
@@ -138,17 +154,16 @@ a {
     text-align: center;
 }
 
-.login-register{
-    font-size:14px ;
-    /* font-size:16px ; */
+.login-register {
+    font-size: 14px;
 }
+
 .login-register a,
 .login-forgot {
     position: relative;
-    color: #000;
+    color: #ffffff;
     font-weight: 500;
-    font-size:14px ;
-    /* font-size:16px ; */
+    font-size: 14px;
 }
 
 
@@ -159,8 +174,8 @@ a {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 1px;
-    background-color: #000000;
+    height: 1.5px;
+    background-color: #fff;
     opacity: 0;
     transition: width 0.3s ease, left 0.3s ease;
 }
@@ -181,38 +196,70 @@ a {
     top: -12px;
 }
 
+
+
+
+input {
+    font-size: 16px;
+}
+
+input[type="password"]::-webkit-reveal {
+    visibility: hidden;
+}
+
+/* Firefox ve diğer tarayıcılarda */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    visibility: hidden;
+}
+
+.login-box-input {
+    position: relative;
+}
+
+.login-eye {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.login-title {
+    font-size: 20px;
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 @media screen and (min-width: 1024px) {
 
     .login-check {
         margin-bottom: 36px;
     }
-    
-    
-    
+
+
+    .login-title {
+        font-size: 24px;
+    }
+
     .login-check-group {
         column-gap: 0.5rem;
     }
-    
-    .login-check-label{
-        font-size: 16px;
-    }
-    
+
+
     .login-check-input {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
     }
-    
-    
+
+
     .login-button {
         margin-bottom: 32px;
     }
-    
-    .login-register{
-        font-size:16px ;
-    }
-    .login-register a,
-    .login-forgot {
-        font-size:16px ;
-    }
+
+
+
+
+
 }

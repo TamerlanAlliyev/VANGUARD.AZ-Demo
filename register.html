@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/cilent/assets/css/swiper-bundle.min.css">
 
     <link rel="stylesheet" href="/cilent/assets/css/index.css">
+    <link rel="stylesheet" href="/cilent/assets/css/register.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <title>Vanguard</title>
 </head>
 
 <body>
 
-<!-- ================================
+    <!-- ================================
         HEADER    -    START
 ===================================== -->
     <header>
@@ -27,7 +31,7 @@
 
                 <nav class="pages-pc">
                     <ul>
-                        <li><a href="/cilent/index.php">Home</a></li>
+                        <li><a href="/index.html">Home</a></li>
                         <li><a href="/cilent/about.php">About</a></li>
                         <li><a href="/cilent/contact.php">Blog</a></li>
                         <li><a href="/cilent/contact.php">Contact</a></li>
@@ -682,121 +686,295 @@
         </div>
 
     </header>
-<!-- ================================
+    <!-- ================================
         HEADER    -    END
 ===================================== -->
 
-<section style="height: 200vh;">
-    
-</section>
+    <!-- ================================
+        MAIN    -    START
+===================================== -->
+    <main>
 
 
-<!-- ================================
+
+
+        <!-- =============== LOGIN SECTION - Start =============== -->
+        <section class="register">
+
+
+            <form action="" class="register-form">
+                <h1 class="register-title">Register</h1>
+
+
+
+                <div class="form-container">
+
+                    <div class="container-left">
+
+                        <div class="full-name">
+
+                            <div class="register-box">
+                                <i class="fa-regular fa-user register-icon"></i>
+                                <div class="register-box-input">
+                                    <input type="text" required class="register-input" id="register-name"
+                                        placeholder=" ">
+                                    <label for="register-name" class="register-label">Name</label>
+                                </div>
+                            </div>
+
+                            <div class="register-box">
+                                <i class="fa-regular fa-user register-icon"></i>
+                                <div class="register-box-input">
+                                    <input type="text" required class="register-input" id="register-surname"
+                                        placeholder=" ">
+                                    <label for="register-surname" class="register-label">Surname</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="box">
+                            <span for="register-name">
+                            <!--  -->
+                            </span>
+                            <span for="register-surname">
+                                <!--  -->
+                            </span>
+                        </div>
+                            
+                        
+                        <div class="box">
+                            <div class="register-box">
+                                <i class="fa-regular fa-envelope register-icon"></i>
+                                <div class="register-box-input">
+                                    <input type="email" required class="register-input" id="register-email"
+                                        placeholder=" ">
+                                    <label for="register-email" class="register-label">Email</label>
+                                </div>
+                            </div>
+                            <span for="register-email">
+                                <!--  -->
+                            </span>
+                        </div>
+
+
+                        <div class="register-box">
+                            <i class="fa-solid fa-phone register-icon"></i>
+                            <div class="register-box-input">
+                                <input type="tel" required class="register-input" id="register-phone" placeholder=" ">
+                                <label for="register-phone" class="register-label">Phone</label>
+                                <i class="ri-eye-off-line login-eye" id="login-eye"></i>
+                            </div>
+                        </div>
+
+                        <div class="box">
+
+                            <div class="register-box">
+                                <i class="fa-solid fa-lock register-icon"></i>
+
+                                <div class="register-box-input">
+                                    <input type="password" required class="register-input" id="register-pass"
+                                        placeholder=" ">
+                                    <label for="register-pass" class="register-label">Password</label>
+                                    <i class="fa-regular fa-eye register-eye" id="register-eye"></i>
+                                </div>
+                            </div>
+                            <span for="register-pass">
+                                <!--  -->
+                            </span>
+                        </div>
+
+                      
+
+                    </div>
+
+
+
+                    <div class="container-right">
+
+                        <div class="profile-img">
+
+                            <div class="image">
+                                <img src="/cilent/assets/images/settings/user-profil.png" alt="">
+                                <div class="photo">
+                                    <img src="/cilent/assets/icons/photo.svg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="img-file">
+                                <label id="label" for="image-file">Upload Image</label>
+                                <input id="image-file" type="file">
+                            </div>
+
+                        </div>
+
+                        <div class="box">
+                            <div class="register-box">
+                                <i class="fa-solid fa-lock register-icon"></i>
+                                <div class="register-box-input">
+                                    <input type="password" required class="register-input"
+                                        id="register-confirm-password" placeholder=" ">
+                                    <label for="register-confirm-password" class="register-label">Confirm
+                                        Password</label>
+                                    <i class="fa-regular fa-eye register-eye" id="register-eye"></i>
+                                </div>
+                            </div>
+                            <span for="register-confirm-password"> 
+                                <!--  -->
+                            </span>
+                        </div>
+
+
+                    </div>
+                    
+
+                </div>
+
+
+
+
+                <button type="submit" class="register-button">Register</button>
+
+                <div class="box validations">
+                    <!-- Validations -->
+                </div>
+
+                <p class="login-register">
+                    Have an account already? <a href="/login.html">Login</a>
+                </p>
+            </form>
+
+        </section>
+        <!-- =============== LOGIN SECTION - End =============== -->
+
+
+
+
+
+
+    </main>
+    <!-- ================================
+        MAIN    -    END
+===================================== -->
+
+    <!-- ================================
         FOOTER    -    START
 ===================================== -->
-    <footer>
+<footer>
 
-        <div class="footer-top">
+    <div class="footer-top">
 
-            <div class="brand-info">
+        <div class="brand-info">
 
-                <h1>VANGUARD</h1>
+            <h1>VANGUARD</h1>
 
-                <div class="contact">
+            <div class="contact">
 
-                    <div class="brand-ad">
-                        <img src="/cilent/assets/icons/location.svg" alt="logo">
-                        <a href="#">Address: Your address</a>
-                    </div>
-                    <div class="brand-ad">
-                        <img src="/cilent/assets/icons/mail.svg" alt="logo">
-                        <a href="#">vanguard@gmail.az</a>
-                    </div>
-                    <div class="brand-ad">
-                        <img src="/cilent/assets/icons/phone.svg" alt="logo">
-                        <a href="#">+994 50 710 10 15</a>
-                    </div>
 
+
+
+
+                <div class="brand-ad">
+                    <img src="/cilent/assets/icons/location.svg"  alt="logo">
+                    <a>Port Baku Mall, 151 Neftchilar Avenue, Baku</a>
                 </div>
 
-                <div class="social-platforms">
-                    <a href="#"><img src="/cilent/assets/icons/facebook.svg" alt="facebook"></a>
-                    <a href="#"><img src="/cilent/assets/icons/instagram.svg" alt="instagram"></a>
-                    <a href="#"><img src="/cilent/assets/icons/twitter-x.svg" alt="twitter"></a>
-                    <a href="#"><img src="/cilent/assets/icons/linkedin.svg" alt="linkedin"></a>
-                    <a href="#"><img src="/cilent/assets/icons/whatsapp.svg" alt="whatsapp"></a>
-                </div>
-            </div>
-
-            <div class="web-info">
-
-                <div class="info-list">
-                    <h3>COMPANY</h1>
-
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
+                <div class="brand-ad">
+                    <img src="/cilent/assets/icons/mail.svg"  alt="logo">
+                    <a href="mailto:vanguardfashionaz@gmail.com" target="_blank">vanguardfashionaz@gmail.com</a>
                 </div>
 
-                <div class="info-list">
-                    <h3>HELP</h1>
-
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Legal & Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gift Card</a></li>
-                        </ul>
+                <div class="brand-ad">
+                    <img src="/cilent/assets/icons/phone.svg"  alt="logo">
+                    <a href="tel:+994507101015" target="_blank">+994507101015</a>
                 </div>
-
-                <!-- <div class="info-list">
-                    <h3>HELP</h1>
-
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Legal & Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gift Card</a></li>
-                        </ul>
-                </div> -->
 
             </div>
 
-            <div class="subscribe">
-
-                <h3>Subscribe</h3>
-
-                <form class="subscribe-form">
-                    <p>Be the first to get the latest news about trends, promotions, and much more!</p>
-                    <input type="email" placeholder="Enter your email">
-                    <div>
-                        <button type="submit" href="#">JOIN</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <p>© 2024 Clothing. Made with by<a href="#">: Tamerlan Aliyev</a></p>
-
-            <div class="payments">
-                <img src="/cilent/assets/icons/visa.svg" alt="visa">
-                <img src="/cilent/assets/icons/master.svg" alt="master">
+            <div class="social-platforms">
+                <a href="https://www.facebook.com/profile.php?id=61550959731138" target="_blank"><img
+                        src="/cilent/assets/icons/facebook.svg" alt="facebook"></a>
+                <a href="https://www.instagram.com/vanguard.az/" target="_blank"><img src="/cilent/assets/icons/instagram.svg"
+                        alt="instagram"></a>
+                <a href="#" target="_blank"><img src="/cilent/assets/icons/twitter-x.svg" alt="twitter"></a>
+                <a href="https://www.linkedin.com/in/tamerlan-aliyev-74a693284/" target="_blank"><img
+                        src="/cilent/assets/icons/linkedin.svg" alt="linkedin"></a>
+                <a href="https://wa.me/994507101015" target="_blank"><img src="/cilent/assets/icons/whatsapp.svg"
+                        alt="whatsapp"></a>
             </div>
         </div>
 
-    </footer>
-<!-- ================================
+        <div class="web-info">
+
+            <div class="info-list">
+                <h3>COMPANY</h1>
+
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+            </div>
+
+            <div class="info-list">
+                <h3>HELP</h1>
+
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Find a Store</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Legal & Privacy</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Gift Card</a></li>
+                    </ul>
+            </div>
+
+            <!-- <div class="info-list">
+                <h3>HELP</h1>
+
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Find a Store</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Legal & Privacy</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Gift Card</a></li>
+                    </ul>
+            </div> -->
+
+        </div>
+
+        <div class="subscribe">
+
+            <h3>Subscribe</h3>
+
+            <form class="subscribe-form">
+                <p>Be the first to get the latest news about trends, promotions, and much more!</p>
+                <input type="email" placeholder="Enter your email">
+                <div>
+                    <button type="submit" href="#">JOIN</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>© 2024 Clothing. Made with by<a href="#">: Tamerlan Aliyev</a></p>
+
+        <div class="payments">
+            <img src="/cilent/assets/icons/visa.svg" alt="visa">
+            <img src="/cilent/assets/icons/master.svg" alt="master">
+        </div>
+    </div>
+
+</footer>
+    <!-- ================================
         FOOTER    -    END
 ===================================== -->
+    <!-- Link Swiper's CSS -->
+    <script src="/cilent/assets/js/swiper-bundle.min.js"></script>
+    <script src="/cilent/assets/js/register.js"></script>
     <script src="/cilent/assets/js/index.js"></script>
 
 </body>
