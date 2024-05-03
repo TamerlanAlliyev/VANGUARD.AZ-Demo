@@ -1158,13 +1158,7 @@ ul.order-datas .order-data .order-product-img img {
     height: 100%;
 }
 
-.hover-image.swiper-slide {
-    text-align: center;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .hover-image.swiper-slide img {
     display: block;
@@ -1527,3 +1521,26 @@ ul.order-datas .order-data .order-product-img img {
 
 
 }
+
+
+
+
+
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #d90000;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
