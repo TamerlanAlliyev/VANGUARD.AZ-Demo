@@ -675,6 +675,8 @@ header .header-info .page-list .pages-pc ul {
     color: #000;
 }
 
+
+
 .searchs .basket-list .basket-product-list li {
     padding: 18px 0;
     border-bottom: 1px solid #bababa;
@@ -709,7 +711,7 @@ header .header-info .page-list .pages-pc ul {
     font-size: 18px;
     font-weight: 500;
 }
-
+/* 
 .searchs .basket-list .basket-view .bastek-total-price .dis-price {
     font-size: 18px;
     font-weight: 500;
@@ -726,7 +728,7 @@ header .header-info .page-list .pages-pc ul {
     font-size: 14px;
     font-weight: 500;
     color: #000;
-}
+} */
 
 .searchs .basket-list .basket-view .basket-buttons {
     display: flex;
@@ -1189,13 +1191,15 @@ header .header-info .page-list .pages-pc ul {
     font-weight: 400 !important;
     color: #000;
     font-size: 12px !important;
+    display: flex !important;
+    align-items: end !important;
+    margin-left: 5px !important;
 }
 
 .sell-price.dis {
     font-weight: 600 !important;
     color: #d90000 !important;
     font-size: 14px !important;
-    /* font-size: 14px; */
 }
 
 
@@ -1205,7 +1209,6 @@ header .header-info .page-list .pages-pc ul {
     color: #000 !important;
     font-size: 14px !important;
 }
-
 
 
 

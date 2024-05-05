@@ -7,11 +7,11 @@
 
 
 
-$(document).ready(function() {
-  $(window).on('beforeunload', function() {
-    $('#loader').fadeIn();
-  });
-});
+// $(document).ready(function() {
+//   $(window).on('beforeunload', function() {
+//     $('#loader').fadeIn();
+//   });
+// });
 
 
 
@@ -241,7 +241,6 @@ basketProdList.forEach((item) => {
   else {
     basketTotalPrices.innerHTML = '<span class="sell-price sell" id="sell-price">$100 </span>';
   }
-  console.log(basketTotalPrices)
 
 
 
@@ -372,11 +371,6 @@ basketProdList.forEach((item) => {
   basketTotalCount += parseFloat(input.value);
   basketItemCount.innerText = basketTotalCount;
 
-
-
 });
 
 
-
-// console.log(SellPrice)
-// console.log(DisPrice)
