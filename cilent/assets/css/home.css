@@ -189,8 +189,6 @@
     align-items: center;
     gap: 10px;
     position: absolute;
-    /* bottom: 5%;
-    left: 50%; */
     bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -228,25 +226,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section {
     display: flex;
     flex-direction: column;
@@ -264,307 +243,266 @@
 }
 
 
+
 /* ----------------------
 COLLECTION SLIDER - Start
 ------------------------- */
 
-.collection-area {
-    /* height: 100vh; */
+.section.collection {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     max-height: 700px;
-
+    height: 100%;
 }
 
 .section.collection h1 {
-    text-align: center;
     margin: 0 auto 5%;
-    color: #000;
-    font-size: 16px;
+    text-align: center;
+    font-size: 18px;
 }
 
-
-.collection-list {
+.section.collection .collection-area {
     display: flex;
-    flex-direction: column;
-    gap: 5%;
     width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 700px;
 }
-
-
-
-/* ========== list-one - Start ========== */
 
 .collection-area .list-one {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: top center;
+    display: flex;
     background-repeat: no-repeat;
-    padding: 10%;
-}
-
-
-.list-one-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    background-position: top center;
+    background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 37%;
 }
 
-.list-one-card {
-    display: flex;
-    gap: 7%;
-}
-
-.list-one-card .list-one-info p {
-    font-size: 10px;
-    color: #000;
-}
-
-.list-one-card .list-one-info a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.list-one-card .one-btn a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 10px;
-    border: 1px solid #000;
-    padding: 2%;
-    transition: all 0.5s ease;
-}
-
-
-.list-one-card .one-btn a:hover {
-    background-color: #d90000;
-    border: none;
-    border: 1px solid transparent;
-    text-align: center;
-    color: #fff;
-}
-
-.list-one-card .one-btn a:active {
-    text-decoration: none;
-    background-color: #9a0101;
-    text-align: center;
-}
-
-
-/* ========== list-one - End ========== */
-
-
-
-
-
-
-
-
-
-/* ========== list-two - Start ========== */
 
 .collection-area .list-two {
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 58%;
+    gap: 8%;
 }
 
 
+
+.collection-area .list-two .list-two-gift {
+    display: flex;
+    width: 100%;
+    height: 28%;
+    padding: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .collection-area .list-two .list-two-product {
+    display: flex;
     width: 100%;
-    height: 70%;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+    height: 65%;
 
-    padding: 10%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
-.list-two-card {
+
+/* list-one */
+
+.collection-area .list-one .list-one-card {
+    width: 100%;
+    display: flex;
+    padding: 8%;
+    gap: 3%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+
+.list-one .list-one-card .list-one-info a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.list-one .list-one-card .list-one-info p {
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+}
+
+
+
+
+.list-one .list-one-card .one-btn {
+    display: flex;
+}
+
+.list-one .list-one-card .one-btn a {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    border: 1px solid #000;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.list-one .list-one-card .one-btn a:hover {
+    background: #d90000;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.list-one .list-one-card .one-btn a:active {
+    background: #9a0101;
+}
+
+
+
+/* list-one */
+
+
+
+
+
+/* list-two-card */
+.list-two .list-two-product .list-two-card {
+    height: 100%;
+    padding: 5%;
+    gap: 3%;
+    width: 100%;
+    display: flex;
+    padding: 8%;
+    gap: 3%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.list-two-product .list-two-card .list-two-info {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
-    gap: 7%;
+    justify-content: space-between;
+    gap: 3%;
 }
 
 
-
-
+.list-two-card .list-two-info a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
 
 
 .list-two-card .list-two-info p {
+    font-weight: 400;
+    text-decoration: none;
     color: #000;
     font-size: 10px;
 }
 
-.list-two-card .list-two-info a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
 
+
+
+.list-two-card .two-btn {
+    display: flex;
 }
 
 .list-two-card .two-btn a {
-    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 10px;
+    color: #000;
+    font-size: 12px;
     border: 1px solid #000;
-    padding: 2%;
-    transition: all 0.5s ease;
-
+    font-weight: 400;
+    padding: 8px;
 }
 
-
 .list-two-card .two-btn a:hover {
-    background-color: #d90000;
-    border: none;
+    background: #d90000;
     border: 1px solid transparent;
-    text-align: center;
     color: #fff;
 }
 
 .list-two-card .two-btn a:active {
-    text-decoration: none;
-    background-color: #9a0101;
-    text-align: center;
-}
-
-/* ========== list-two - End ========== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========== list-two-gift - Start ========== */
-
-
-.collection-area .list-two .list-two-gift {
-    width: 100%;
-    height: 30%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #9a0101;
 }
 
 
+/* list-two-card */
 
 
 
 
+/* list-two-gift  */
 
-
-.list-two-gift {
+.list-two .list-two-gift {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 5%;
     color: #fff;
-    padding: 10%;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
-.list-two-gift .gift-info {
+.gift-info {
     display: flex;
     flex-direction: column;
-    color: #000;
-}
-
-.list-two-gift .gift-info a {
-    display: flex;
-    color: #fff;
-    text-decoration: none;
-}
-
-.list-two-gift .gift-info a:first-child {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.list-two-gift .gift-info a:last-child {
-    color: #ffffff;
-    font-size: 12px;
-}
-
-
-
-.list-two-gift .shop-btn {
-    width: 105px;
-    display: flex;
-    align-items: center;
+    height: 100%;
     justify-content: center;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #d90000;
+    gap: 5%;
+    width: 70%;
+}
+
+.list-two .list-two-gift .gift-info a:nth-child(1) {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.list-two .list-two-gift .gift-info a:nth-child(2) {
     font-weight: 500;
-    font-size: 10px;
-    padding: 2%;
-    transition: all 0.5s ease;
+    font-size: 14px;
 }
 
-.list-two-gift .shop-btn:active {
-    background-color: #9a0101;
+
+.list-two .shop-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #fff;
+    font-weight: 400;
+    padding: 8px;
 }
 
-/* ========== list-two-gift - End ========== */
+.list-two .shop-btn:hover {
+    background: #d90000;
+}
+
+.list-two .shop-btn:active {
+    background: #9a0101;
+    border: 1px solid transparent;
+}
+
+/* list-two-gift  */
+
+
 
 
 
 /* ----------------------
 COLLECTION SLIDER - End
 ------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -586,7 +524,7 @@ TRENDY SLIDER - Start
 
 
 .section {
-    padding: 0 7%;
+    padding: 0 3%;
 }
 
 /* ---------- trendy-sec-head - Start ---------- */
@@ -594,15 +532,15 @@ TRENDY SLIDER - Start
 .trendy .trendy-sec-head {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
+    gap: 12px;
 }
 
 .trendy .trendy-sec-head h2 {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .trendy .trendy-sec-head .trendy-list {
@@ -610,13 +548,24 @@ TRENDY SLIDER - Start
     justify-content: center;
     gap: 4%;
     list-style: none;
-    font-size: 12px;
 }
 
 .trendy .trendy-sec-head .trendy-list a {
     text-decoration: none;
-    color: #444444;
+    color: #3c3c3c;
     position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.trendy .trendy-sec-head .trendy-list a.active {
+    color: #000;
+    font-weight: 600;
+}
+
+.trendy .trendy-sec-head .trendy-list a:hover {
+    color: #000;
 }
 
 
@@ -627,7 +576,7 @@ TRENDY SLIDER - Start
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #292929;
+    background-color: #000000;
     opacity: 0;
     transition: all 0.3s ease, left 0.3s ease;
 }
@@ -648,88 +597,92 @@ TRENDY SLIDER - Start
 
 
 
+
+
+
+
 /* ---------- SWIPER - START ---------- */
 
 
-.section.trendy .swiper {
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+.section.trendy .swiper.sub {
     width: 100%;
-    height: 800px;
-    display: none !important;
+    display: none;
     margin-top: 5px;
-}
-
-.section.trendy .swiper.active {
-    display: inherit !important;
-}
-
-
-.section.trendy .swiper-pagination {
     position: static;
-    top: 10px !important;
-    height: 100%;
-}
-
-.section.trendy .swiper-wrapper {
-    height: 100%;
-}
-
-.section.trendy .swiper {
-    position: static;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 3%;
+    height: 300px;
+    transition: all 0.9s ease;
 }
 
-.section.trendy .swiper-pagination {
+.section.trendy .swiper.sub.active {
+    display: flex !important;
+    animation: fadeIn 0.9s ease;
+}
+
+
+.section.trendy .swiper-pagination.t-a {
+    top: 10px !important;
     position: relative;
     align-items: center;
     text-align: center;
+    justify-content: center;
+    height: 15%;
 }
 
-@media only screen and (max-width: 480px) {
-    .section.trendy .swiper {
-        width: 100%;
-        height: 330px;
-    }
-
-
+.section.trendy .swiper-wrapper.products-cart {
+    height: 88%;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .section.trendy .swiper {
-        width: 100%;
-        height: 700px;
-    }
-
-    .section {
-        padding: 0 3%;
-    }
+.section.trendy .swiper-wrapper.products-cart .swiper-slide {
+    width: 100%;
 }
 
-
-
-/* ---------- SWIPER Pagenation - START ---------- */
-
-.swiper-pagination {
+.section.trendy .swiper-pagination {
     --swiper-pagination-color: red;
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
     --swiper-pagination-bullet-inactive-color: #000;
     --swiper-pagination-bullet-inactive-opacity: 0.2;
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-pagination-top: auto;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
 }
 
 
-/* ---------- SWIPER Pagenation - END ---------- */
-
-
-
-/* ---------- SWIPER - End ---------- */
+/* ---------- SWIPER - END ---------- */
 
 
 
@@ -741,198 +694,982 @@ TRENDY SLIDER - Start
 
 
 
-/* ---------- trendy-product - Start ---------- */
-
-/* ***** product-image ***** */
 
 
 
-.section.trendy .swiper-slide.trendy-product {
+
+
+/* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.product-box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 47%;
+    z-index: 99999999;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-image {
-    display: flex;
+
+
+
+
+/* ***** product-image-box ***** */
+
+.product-box .product-image-box {
     width: 100%;
-    height: 77%;
-    transition: all 0.9s ease;
+    position: relative;
+    z-index: 30;
+    height: 80%;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-image .prod-img {
+
+
+
+
+.product-image-box .p-buttons {
+    width: 100%;
+    position: absolute;
+    z-index: 25;
+    bottom: 0;
+    left: 0;
     display: flex;
+    justify-content: center;
+}
+
+
+.product-image-box .p-buttons .add-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    background: #ffffff;
+    margin-bottom: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 10px;
+    width: 70%;
+    padding: 4px;
+}
+
+
+
+.product-image-box.active .p-buttons .add-btn.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+.product-image-box .p-buttons a:hover {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-box .p-buttons a:active {
+    background: #9a0101;
+}
+
+
+
+.product-image-box .p-buttons .add-size {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 20;
+    bottom: 0;
+    background: #fff;
+    font-size: 10px;
+}
+
+.product-image-box .p-buttons .add-size.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-box .p-buttons .add-size .btn-size {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+
+
+
+.product-image-box .p-buttons .add-size .btn-size:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-image-box .p-buttons .add-size .btn-size:active {
+    background: #d90000;
+}
+
+
+
+
+
+
+
+
+
+.product-image-box .labels {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+    z-index: 20;
+    margin-left: 5px;
+    left: 3%;
+    top: 3%;
+    width: 50%;
+}
+
+.product-image-box .labels a {
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding: 1px;
+    font-size: 7px;
+}
+
+
+.product-image-box .labels .new {
+    color: #000;
+    background: #fff;
+}
+
+.product-image-box .labels .dis {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-box .labels .best {
+    color: #fff;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **** S W I P E R ***** */
+
+
+.product-image-box .swiper {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-image .prod-img img {
+.product-image-box .swiper .swiper-slide {
+    height: 250px;
+    line-height: 250px;
+    width: 100%;
+}
+
+.product-image-box .swiper-button-next::after,
+.product-image-box .swiper-button-prev::after {
+    color: #8d8c8c;
+    font-size: 18px;
+}
+
+
+
+/* **** S W I P E R ***** */
+
+
+
+
+
+
+.p-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 20;
+}
+
+.p-images .main-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-image-box.active .p-images .main-image {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.p-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    transition: all 0.5s ease;
 }
 
 
 
+/* H O V E R */
 
-
-
-
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-
-    text-align: center;
-    width: 70%;
-    text-decoration: none;
-    font-size: 14px;
-    color: #000;
-    background: #fff;
-    padding: 3% 12%;
-    transition: all 0.5s ease;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add.active {
-    display: block;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add:hover {
-    background-color: #d90000;
-    color: #fff;
-    font-weight: 500;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add:active {
-    background-color: #9a0101;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .offer {
-    top: 3%;
-    left: 5%;
-    display: flex;
-    background: #ffffff;
-    position: absolute;
-    padding: 1% 3%;
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-    /* font-size: 14px; */
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .offer.dis {
-    color: #fff;
-    background-color: #d90000;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .offer.best {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    background-color: #000000;
-}
-
-
-
-
-/* ***** product-image ***** */
-
-
-
-/* ***** product-info ***** */
-
-.section.trendy .swiper-slide.trendy-product .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+.p-images .hover-image {
     width: 100%;
-    height: 20%;
+    height: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease;
+
 }
 
-.section.trendy .swiper-slide.trendy-product .product-info .product-name {
+
+.product-image-box.active>.p-images .hover-image {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** product-info-box ***** */
+
+.section.trendy .product-box .product-info-box {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    height: 17%;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
-    text-decoration: none;
-    color: #292929;
-    margin-top: 2%;
-    font-size: 10px;
-}
 
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
-    text-decoration: none;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 4%;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
-    font-weight: 600;
-    color: #d90000;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
-    font-weight: 600;
-    color: #000;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
-    font-weight: 500;
-    color: #000;
-    font-size: 10px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .wish {
+.product-box .product-info-box .p-inf {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    height: 100%;
+    width: 70%;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-info img {
+
+.product-info-box .p-inf div {
     display: flex;
+    flex-direction: column;
+}
+
+.product-info-box .p-inf div h6 {
+    font-weight: 400;
+    color: #3c3c3c;
+    font-size: 8px;
+}
+
+
+
+.product-info-box .p-inf div h3 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 10px;
+}
+
+.product-info-box .p-inf span {
+    font-weight: 400;
+    color: #000000;
+    font-size: 8px;
+}
+
+
+
+.product-info-box .p-pric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 35%;
+}
+
+
+.product-info-box .p-pric img {
+    width: 14px;
+    height: 14px;
     transition: all 0.5s ease;
-    width: 18px;
+    cursor: pointer;
 }
 
-.section.trendy .swiper-slide.trendy-product .product-info img:hover {
+.product-info-box .p-pric img:hover {
     transform: scale(1.15);
 }
 
-.section.trendy .swiper-slide.trendy-product .product-info img:hover + .wish-share span {
-    transform: scale(1.15);
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info img:active {
+.product-info-box .p-pric img:active {
     transform: scale(0.9);
 }
 
 
 
+.product-info-box .p-pric .cart-prices {
+    width: 100%;
+    text-align: end;
+}
 
 
 
-/* ***** product-info ***** */
+.product-info-box .p-pric .cart-prices .sell-price {
+    font-weight: 500;
+    color: #000;
+    font-size: 8px;
+}
+
+.product-info-box .p-pric .cart-prices .sell-price.dis {
+    font-weight: 600;
+    color: #d90000;
+    font-size: 10px;
+}
+
+.product-info-box .p-pric .cart-prices .sell-price.sell {
+    font-weight: 600;
+    color: #000;
+    font-size: 10px;
+}
 
 
-/* ---------- trendy-product - End ---------- */
+/* ***** product-info-box ***** */
 
 
 
-/* ----------------------
-TRENDY SLIDER - End
+/* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+
+    /* ----------------------
+COLLECTION SLIDER - Start
 ------------------------- */
+
+    .section.collection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 70vh;
+        height: 100%;
+    }
+
+    .section.collection h1 {
+        font-size: 20px;
+    }
+
+    .section.collection .collection-area {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 70vh;
+        flex-direction: row;
+    }
+
+    .collection-area .list-one {
+        width: 100%;
+        height: auto;
+        width: 43%;
+    }
+
+
+    .collection-area .list-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: auto;
+        gap: 0;
+    }
+
+
+
+    /* list-one */
+
+    .collection-area .list-one .list-one-card {
+        width: 100%;
+        display: flex;
+        padding: 8%;
+        gap: 3%;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+
+    .list-one .list-one-card .list-one-info a {
+        font-size: 14px;
+    }
+
+    .list-one .list-one-card .list-one-info p {
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .list-one .list-one-card .one-btn {
+        display: flex;
+    }
+
+    .list-one .list-one-card .one-btn a {
+        font-size: 14px;
+    }
+
+    /* list-one */
+
+
+    /* list-two-card */
+
+
+
+
+    .list-two-card .list-two-info a {
+        font-size: 16px;
+    }
+
+
+    .list-two-card .list-two-info p {
+        font-size: 12px;
+    }
+
+
+
+
+
+
+    .list-two-card .two-btn {
+        display: flex;
+    }
+
+    .list-two-card .two-btn a {
+        font-size: 14px;
+    }
+
+    /* list-two-card */
+
+
+
+
+
+
+
+
+    /* list-two-gift  */
+
+    .list-two .shop-btn {
+        font-size: 14px;
+    }
+
+    .list-two .shop-btn:active {
+        border: 1px solid transparent;
+    }
+
+    /* list-two-gift  */
+
+
+
+
+
+    /* ----------------------
+COLLECTION SLIDER - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+TRENDY SLIDER - Start
+------------------------- */
+
+
+
+    .section {
+        padding: 0 3%;
+    }
+
+    /* ---------- trendy-sec-head - Start ---------- */
+    .trendy .trendy-sec-head h2 {
+        font-size: 18px;
+    }
+
+
+
+    .trendy .trendy-sec-head .trendy-list a {
+        font-size: 12px;
+    }
+
+    /* ---------- trendy-sec-head - End ---------- */
+
+
+
+
+
+
+
+    /* ---------- SWIPER - START ---------- */
+
+    .section.trendy .swiper.sub {
+        height: 740px;
+    }
+
+
+
+    .section.trendy .swiper-pagination.t-a {
+        height: 15%;
+    }
+
+
+    /* ---------- SWIPER - END ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+    /* ***** product-image-box ***** */
+
+    .product-image-box .p-buttons .add-size {
+        font-size: 12px;
+    }
+
+
+    .product-image-box .labels a {
+        font-weight: 500;
+        padding: 1.5px;
+        font-size: 9px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* **** S W I P E R ***** */
+
+
+    .product-image-box .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-image-box .swiper .swiper-slide {
+        height: 250px;
+        line-height: 250px;
+    }
+
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 20px;
+        font-size: 20px;
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+    .section.trendy .product-box .product-info-box {
+        height: 17%;
+    }
+
+    .product-info-box .p-inf div h6 {
+        font-size: 10px;
+    }
+
+
+
+    .product-info-box .p-inf div h3 {
+        font-size: 12px;
+    }
+
+    .product-info-box .p-inf span {
+        font-size: 12px;
+    }
+
+
+
+    .product-info-box .p-pric {
+        width: 30%;
+    }
+
+
+    .product-info-box .p-pric img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price {
+        font-size: 10px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.dis {
+        font-size: 12px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.sell {
+        font-size: 12px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+
+
+
+
+    /* ----------------------
+TRENDY SLIDER - Start
+------------------------- */
+
+
+
+    /* ---------- trendy-sec-head - Start ---------- */
+
+    .trendy .trendy-sec-head {
+        gap: 24px;
+        margin-bottom: 2%;
+    }
+
+    .trendy .trendy-sec-head h2 {
+        font-size: 24px;
+    }
+
+
+
+    .trendy .trendy-sec-head .trendy-list a {
+        font-size: 16px;
+    }
+
+    /* ---------- trendy-sec-head - End ---------- */
+
+
+
+
+
+
+
+    /* ---------- SWIPER - START ---------- */
+
+    .section.trendy .swiper.sub {
+        height: 950px;
+    }
+
+
+
+    .section.trendy .swiper-pagination.t-a {
+        height: 5%;
+    }
+
+    .section.trendy .swiper-pagination {
+        --swiper-pagination-bullet-size: 16px;
+        --swiper-pagination-bullet-width: 16px;
+        --swiper-pagination-bullet-height: 16px;
+    }
+
+    /* ---------- SWIPER - END ---------- */
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+    /* ***** product-image-box ***** */
+
+    .product-box .product-image-box {
+        height: 78%;
+    }
+
+
+
+
+    .product-image-box .p-buttons .add-btn {
+        padding: 8px;
+        font-size: 16px;
+        width: 80%;
+
+    }
+
+
+    .product-image-box .p-buttons .add-size {
+        font-size: 16px;
+    }
+
+
+
+    .product-image-box .p-buttons .add-size .btn-size {
+        position: relative;
+        z-index: 20;
+    }
+
+
+    .product-image-box .labels a {
+        font-weight: 600;
+        font-size: 12px;
+        padding: 2px;
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+    .product-image-box .swiper .swiper-slide {
+        height: 310px;
+        line-height: 310px;
+    }
+
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 24px;
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+
+    /* ***** product-info-box ***** */
+
+    .section.trendy .product-box .product-info-box {
+        height: 18%;
+    }
+
+
+    .product-box .product-info-box .p-inf {
+        justify-content: space-between !important;
+    }
+
+
+
+    .product-info-box .p-inf div h6 {
+        font-size: 12px;
+    }
+
+
+
+    .product-info-box .p-inf div h3 {
+        font-size: 16px;
+    }
+
+    .product-info-box .p-inf span {
+        font-size: 14px;
+    }
+
+
+
+
+    .product-info-box .p-pric img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price {
+        font-size: 12px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.dis {
+        font-size: 14px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.sell {
+        font-size: 14px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -992,9 +1729,17 @@ BLOG SECTION - Start
     padding: 0 !important;
     max-height: 50px !important;
     height: 100%;
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
 }
-
-
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -1188,7 +1933,7 @@ SERVICE SECTION - End
 
 
 /* ----------------------
-DEAL OF WEEK    SECTION - End
+DEAL OF WEEK    SECTION - Start
 ------------------------- */
 
 
@@ -1203,18 +1948,20 @@ DEAL OF WEEK    SECTION - End
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    gap: 40px;
     flex-direction: column;
-    /* flex-direction: row; */
-    gap: 20px;
 }
 
 
 
 .dealofweek .deal-products {
-    width: 50%;
+    width: 100%;
 }
 
-
+.dealofweek .dealofweek-prod {
+    width: 100%;
+    /* width: 50% !important; */
+}
 
 /* ========== deal-offer - Start =========== */
 
@@ -1222,11 +1969,9 @@ DEAL OF WEEK    SECTION - End
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* gap: 30px; */
-
     justify-content: center;
     width: 100%;
-    /* width: 50%; */
+    align-items: center;
 }
 
 .dealofweek .deal-offer .deal-title {
@@ -1234,40 +1979,37 @@ DEAL OF WEEK    SECTION - End
     align-items: center;
     gap: 5%;
     color: #b10505;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .dealofweek .deal-offer .deal-title .arrow {
     height: 2px;
     width: 15%;
-    /* height: 3px; */
     background: #b10505;
 }
 
 .dealofweek .deal-offer .deal-title h5 {
-    font-size: 16px;
-    /* font-size: 22px; */
     font-weight: 500;
+    font-size: 12px;
 }
 
 .dealofweek .deal-offer .deal-collection h1 {
-    /* font-size: 40px;
-    letter-spacing: 10px;
-    word-spacing: 15px; */
+
     color: #fff;
-    font-size: 26px;
     letter-spacing: 5px;
     word-spacing: 10px;
+    font-size: 18px;
 }
 
 .dealofweek .deal-offer .deal-collection h5 {
     color: #fff;
     font-weight: 500;
-    /* font-size: 30px;
-    margin-bottom: 20px;
-    margin-top: 10px; */
-    font-size: 20px;
-    margin-bottom: 20px;
+
     margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .dealofweek .deal-offer a {
@@ -1276,20 +2018,17 @@ DEAL OF WEEK    SECTION - End
     justify-content: center;
     align-items: center;
     color: #fff;
-
     font-weight: 500;
-    padding: 12px;
-    border: 2px solid #fff;
     transition: all 0.5s ease;
-    max-width: 100px;
-    font-size: 12px;
-    /* max-width: 150px; */
-    /* font-size: 16px; */
+    max-width: 70px;
+    font-size: 10px;
+    border: 1.5px solid #fff;
+    padding: 8px;
 }
 
 .dealofweek .deal-offer a:hover {
-    border: 2px solid transparent;
     background: #d90000;
+    border: 1.5px solid transparent;
 }
 
 .dealofweek .deal-offer a:active {
@@ -1303,13 +2042,11 @@ DEAL OF WEEK    SECTION - End
     color: #fff;
     margin-top: 5%;
     gap: 10px;
-    /* gap: 20px; */
 }
 
 .separate {
-    font-size: 20px;
-    /* font-size: 30px; */
     font-weight: 600;
+    font-size: 16px;
 }
 
 .offer-time .time {
@@ -1319,85 +2056,20 @@ DEAL OF WEEK    SECTION - End
     align-items: center;
     width: 40px;
     gap: 5px;
-    /* gap: 10px; */
-    /* width: 50px; */
 }
 
 .offer-time .time .num {
-    font-size: 20px;
     font-weight: 600;
-    /* font-size: 30px; */
+    font-size: 16px;
 }
 
 .offer-time .time .nam {
     color: #ffffff9f;
     font-weight: 400;
-    font-size: 14px;
-    /* font-size: 18px; */
+    font-size: 10px;
 }
 
 /* ========== deal-offer - End =========== */
-
-
-
-/* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
-
-.dealofweek .swiper {
-    height: 100%;
-    background: rgba(183, 175, 175, 0);
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px !important;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 5px;
-    display: flex !important;
-    flex-direction: column;
-    padding: 0 !important;
-    height: 330px !important;
-    width: 100%;
-    /* width: 50%; */
-    /* height: 430px !important; */
-}
-
-.dealofweek .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-}
-
-
-
-.dealofweek .swiper-pagination {
-    position: relative;
-    left: 0 !important;
-    transform: translate(0%, -20%) !important;
-    /*del*/
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    max-height: 50px !important;
-    height: 100%;
-    top: 12px !important;
-    /* top: 20px !important; */
-}
-
-
-.dealofweek .swiper-pagination {
-    --swiper-pagination-color: red;
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
-    --swiper-pagination-bullet-inactive-color: #ffffff;
-    --swiper-pagination-bullet-inactive-opacity: 0.2;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-bullet-vertical-gap: 6px;
-    --swiper-pagination-top: auto;
-}
-
-
-/* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
 
 
 
@@ -1405,20 +2077,326 @@ DEAL OF WEEK    SECTION - End
 
 /* ========== DEALOFWEEK - Products  - Start =========== */
 
-.dealofweek-prod-info {
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+.dealofweek .swiper.dealofweek-prod {
+    width: 100%;
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3%;
+    height: 300px;
+}
+
+
+
+.dealofweek .swiper-pagination.t-a {
+    top: 10px !important;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 10% !important;
+}
+
+.dealofweek .swiper-wrapper.products-carts {
+    height: 87%;
+
+}
+
+.dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+    width: 100%;
+}
+
+.dealofweek .swiper-pagination {
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+
+}
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.product-boxs {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: space-between;
+    width: 47%;
+    z-index: 99999999;
 }
 
-.dealofweek-prod-info .prod-img {
-    display: flex;
+
+
+
+
+/* ***** product-image-box ***** */
+
+.product-boxs .product-image-b {
     width: 100%;
-    height: 75%;
     position: relative;
+    z-index: 30;
+    height: 79%;
 }
 
-.dealofweek-prod-info .prod-img img {
+
+
+
+
+
+
+
+
+.product-image-b .prod-buttons {
+    width: 100%;
+    position: absolute;
+    z-index: 25;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.product-image-b .prod-buttons .add-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    background: #ffffff;
+    margin-bottom: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 10px;
+    width: 70%;
+    padding: 4px;
+
+}
+
+
+
+.product-image-b.active .prod-buttons .add-btn.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+.product-image-b .prod-buttons a:hover {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-b .prod-buttons a:active {
+    background: #9a0101;
+}
+
+
+
+
+.product-image-b .prod-buttons .add-size {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 20;
+    bottom: 0;
+    background: #fff;
+    font-size: 10px;
+}
+
+.product-image-b .prod-buttons .add-size.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b .prod-buttons .add-size .btn-size {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+
+
+
+.product-image-b .prod-buttons .add-size .btn-size:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-image-b .prod-buttons .add-size .btn-size:active {
+    background: #d90000;
+}
+
+
+
+
+
+
+
+
+
+.product-image-b .labels {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+    z-index: 20;
+    margin-left: 5px;
+    width: 50%;
+    top: 3%;
+    left: 3%;
+    width: 50%;
+}
+
+.product-image-b .labels a {
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding: 1px;
+    font-size: 7px;
+}
+
+
+.product-image-b .labels .new {
+    color: #000;
+    background: #fff;
+}
+
+.product-image-b .labels .dis {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-b .labels .best {
+    color: #fff;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* **** S W I P E R ***** */
+
+.product-image-b .swiper {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    animation: fadeIn 0.5s ease;
+    width: 100%;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-image-b.active .prod-images .hover-image {
+    display: block !important;
+    animation: fadeIn 0.5s ease;
+
+}
+
+.product-image-b .prod-images .hover-image.swiper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b.active .prod-images .hover-image.swiper {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-image-b.active .prod-images .hover-image {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b .swiper .swiper-slide {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.product-image-b .swiper-button-next::after,
+.product-image-b .swiper-button-prev::after {
+    color: #8d8c8c;
+    font-size: 18px;
+}
+
+.product-image-b .swiper .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1426,129 +2404,162 @@ DEAL OF WEEK    SECTION - End
 }
 
 
-.dealofweek-prod-info a.dealofweek-basket {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    text-decoration: none;
-    display: none;
-    color: #000;
-    padding: 3%;
-    background: #fff;
-    transition: all 0.5s ease;
-    font-size: 10px;
-    /* font-size: 14px; */
-}
 
-.dealofweek-prod-info a.dealofweek-basket.active {
-    display: block;
-}
-
-.dealofweek-prod-info .dealofweek-basket:hover {
-    background: #d90000;
-    color: #fff;
-}
-
-.dealofweek-prod-info .dealofweek-basket:active {
-    background: #9a0101;
-}
+/* **** S W I P E R ***** */
 
 
 
-.dealofweek-wish {
-    position: absolute;
-    right: 0;
-    bottom: 13%;
-}
 
-.dealofweek-wish img {
+
+.prod-images {
+    width: 100%;
+    height: 100%;
     display: flex;
-    transition: all 0.5s ease;
-    width: 18px;
-    /* width: 22px; */
+    z-index: 20;
 }
 
-.dealofweek-wish img:hover {
+.prod-images .main-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-image-b.active .prod-images .main-image {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.prod-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+
+
+/* H O V E R */
+
+
+
+
+/* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+/* ***** product-info-box ***** */
+
+.dealofweek .product-boxs .product-info-boxs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 16%;
+}
+
+
+.product-boxs .product-info-boxs .p-inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 70% !important;
+}
+
+
+.product-info-boxs .p-inf div {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info-boxs .p-inf div h6 {
+    font-weight: 400;
+    color: #c3c1c1;
+    font-size: 8px;
+}
+
+
+
+.product-info-boxs .p-inf div h3 {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.product-info-boxs .p-inf span {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 8px;
+}
+
+
+
+.product-info-boxs .p-pric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 35%;
+}
+
+
+.product-info-boxs .p-pric img {
+    width: 14px;
+    height: 14px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.product-info-boxs .p-pric img:hover {
     transform: scale(1.15);
 }
 
-.dealofweek-wish img:active {
+.product-info-boxs .p-pric img:active {
     transform: scale(0.9);
 }
 
-.dealofweek-prod-info .offer {
-    top: 3%;
-    left: 5%;
-    display: flex;
-    background: #ffffff;
-    position: absolute;
-    padding: 1% 3%;
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-    /* font-size: 14px; */
-}
-
-.dealofweek-prod-info .offer.dis {
-    color: #fff;
-    background-color: #d90000;
-}
-
-.dealofweek-prod-info .offer.best {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    background-color: #000000;
-}
 
 
-
-
-
-
-
-
-
-.dealofweek-prod-info .prod-info {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
+.product-info-boxs .p-pric .cart-prices {
     width: 100%;
-    margin-top: 8%;
-    /* height: 8%; */
+    text-align: end;
 }
 
 
 
-.dealofweek-prod-info .prod-info .dis-price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fb1212;
-}
-
-.dealofweek-prod-info .prod-info .sell-price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.dealofweek-prod-info .prod-info .sel-price {
-    font-size: 12px;
+.product-info-boxs .p-pric .cart-prices .sell-price {
     font-weight: 500;
-    color: #ffffff;
+    color: #d5d3d3;
+    font-size: 8px;
 }
 
-.prod-name {
-    display: flex;
-    text-decoration: none;
-    color: #f6f6f6;
-    font-size: 12px;
-    /* font-size: 16px; */
+.product-info-boxs .p-pric .cart-prices .sell-price.dis {
+    font-weight: 600;
+    color: #d90000;
+    font-size: 10px;
 }
+
+.product-info-boxs .p-pric .cart-prices .sell-price.sell {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+
+/* ***** product-info-box ***** */
+
 
 /* ========== DEALOFWEEK - Products  - End =========== */
+
 
 
 
@@ -1557,38 +2568,6 @@ DEAL OF WEEK    SECTION - End
 /* ----------------------
 DEAL OF WEEK    SECTION - End
 ------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1620,53 +2599,362 @@ DEAL OF WEEK    SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media screen and (min-width: 600px) { */
-
-
 @media screen and (min-width: 768px) {
-    .list-two-gift {
-        flex-direction: column;
-        align-items: center;
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - Start
+------------------------- */
+
+
+
+    .dealofweek {
+
         justify-content: center;
-        gap: 20px;
-    }
-
-    .list-two-gift .shop-btn {
-        width: 40%;
-    }
-
-    .collection-list {
         flex-direction: row;
     }
+
+
+
+
+    /* ========== deal-offer - Start =========== */
+
+    .dealofweek .deal-offer {
+        align-items: start;
+        justify-content: start;
+        width: 50%;
+    }
+
+    .dealofweek .deal-offer .deal-title {
+        margin-bottom: 10px;
+    }
+
+    .dealofweek .deal-offer .deal-title h5 {
+        font-size: 14px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h1 {
+        font-size: 20px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: start;
+    }
+
+    .dealofweek .deal-offer a {
+        max-width: 80px;
+        border: 2px solid #fff;
+        padding: 10px;
+    }
+
+    .dealofweek .deal-offer a:hover {
+        border: 2px solid transparent;
+    }
+
+    .offer-time {
+        display: flex;
+        color: #fff;
+        margin-top: 5%;
+        gap: 10px;
+    }
+
+    .separate {
+        font-size: 18px;
+    }
+
+    .offer-time .time .num {
+        font-size: 18px;
+    }
+
+    .offer-time .time .nam {
+        font-size: 12px;
+    }
+
+    /* ========== deal-offer - End =========== */
+
+
+
+
+
+    /* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+    .dealofweek .swiper.dealofweek-prod {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3%;
+        height: 300px;
+        width: 50%;
+    }
+
+
+
+    .dealofweek .swiper-pagination.t-a {
+        height: 5%;
+    }
+
+    .dealofweek .swiper-wrapper.products-carts {
+        height: 87%;
+
+    }
+
+    .dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+        width: 100%;
+    }
+
+    .dealofweek .swiper-pagination {
+        --swiper-pagination-color: red;
+        --swiper-pagination-bullet-inactive-color: #ffffff;
+        --swiper-pagination-bullet-inactive-opacity: 0.2;
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 4px;
+        --swiper-pagination-bullet-vertical-gap: 6px;
+        --swiper-pagination-top: auto;
+        --swiper-pagination-bullet-size: 12px;
+        --swiper-pagination-bullet-width: 12px;
+        --swiper-pagination-bullet-height: 12px;
+    }
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+
+
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
+
+    .product-boxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 47%;
+        z-index: 99999999;
+    }
+
+
+
+
+
+    /* ***** product-image-box ***** */
+
+    .product-boxs .product-image-b {
+        width: 100%;
+        position: relative;
+        z-index: 30;
+        height: 79%;
+    }
+
+
+
+    .product-image-b .labels {
+        width: 50%;
+    }
+
+    .product-image-b .labels a {
+        font-weight: 400;
+        padding: 1.5px;
+        font-size: 9px;
+    }
+
+
+    /* **** S W I P E R ***** */
+
+
+
+    .product-image-b .swiper .swiper-slide {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    /* **** S W I P E R ***** */
+
+
+
+
+
+
+
+    /* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+    .dealofweek .product-boxs .product-info-boxs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 16%;
+    }
+
+
+    .product-boxs .product-info-boxs .p-inf {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 70% !important;
+    }
+
+
+    .product-info-boxs .p-inf div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-info-boxs .p-inf div h6 {
+        font-weight: 400;
+        color: #c3c1c1;
+        font-size: 8px;
+    }
+
+
+
+    .product-info-boxs .p-inf div h3 {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .product-info-boxs .p-inf span {
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 8px;
+    }
+
+
+
+    .product-info-boxs .p-pric {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        width: 35%;
+    }
+
+
+    .product-info-boxs .p-pric img {
+        width: 14px;
+        height: 14px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .product-info-boxs .p-pric img:hover {
+        transform: scale(1.15);
+    }
+
+    .product-info-boxs .p-pric img:active {
+        transform: scale(0.9);
+    }
+
+
+
+    .product-info-boxs .p-pric .cart-prices {
+        width: 100%;
+        text-align: end;
+    }
+
+
+
+    .product-info-boxs .p-pric .cart-prices .sell-price {
+        font-weight: 500;
+        color: #d5d3d3;
+        font-size: 8px;
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.dis {
+        font-weight: 600;
+        color: #d90000;
+        font-size: 10px;
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.sell {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 10px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+    /* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1752,17 +3040,6 @@ DEAL OF WEEK    SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     .section {
         margin: 10% auto 0;
     }
@@ -1772,117 +3049,137 @@ DEAL OF WEEK    SECTION - End
     }
 
 
-    /* ----------------------
-COLLECTION SLIDER - Start
-------------------------- */
 
-    .collection-area {
-        height: 80vh;
+
+
+
+    /* ----------------------
+    COLLECTION SLIDER - Start
+    ------------------------- */
+
+    .section.collection {
+        max-height: 800px;
+
     }
 
     .section.collection h1 {
-        margin: 0 auto 3%;
         font-size: 24px;
     }
 
+    .section.collection .collection-area {
+        height: 800px;
+    }
 
-
-
-
-    /* ========== list-one - Start ========== */
-
-    .collection-area .list-one {
-        padding: 5%;
+    .collection-area .list-two {
+        width: 53%;
     }
 
 
-    .list-one-card {
-        gap: 5%;
+
+    /* list-one */
+
+    .collection-area .list-one .list-one-card {
+        align-items: start;
+        justify-content: end;
+        flex-direction: column;
     }
 
-    .list-one-card .list-one-info p {
+
+    .list-one .list-one-card .list-one-info a {
+        font-size: 20px;
+    }
+
+    .list-one .list-one-card .list-one-info p {
         font-size: 16px;
     }
 
-    .list-one-card .list-one-info a {
-        font-size: 24px;
-    }
 
-    .list-one-card .one-btn a {
+    .list-one .list-one-card .one-btn a {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #000;
         font-size: 16px;
     }
 
-
-    /* ========== list-one - End ========== */
-
-
-
-
-
-
-
-
-
-    /* ========== list-two - Start ========== */
-
-
-
-    .collection-area .list-two .list-two-product {
-        padding: 10%;
+    .list-one .list-one-card .one-btn a:hover {
+        border: 2px solid transparent;
     }
 
-    .list-two-card {
-        gap: 5%;
+
+
+    /* list-one */
+
+
+
+
+
+    /* list-two-card */
+    .list-two .list-two-product .list-two-card {
+        align-items: start;
+        justify-content: end;
+        flex-direction: column;
     }
 
 
 
 
+    .list-two-card .list-two-info a {
+        font-size: 20px;
+    }
 
 
     .list-two-card .list-two-info p {
         font-size: 16px;
     }
 
-    .list-two-card .list-two-info a {
-        font-size: 24px;
-    }
 
     .list-two-card .two-btn a {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #000;
         font-size: 16px;
     }
 
-
-    /* ========== list-two - End ========== */
-
-
-
-
-    /* ========== list-two-gift - Start ========== */
-
-    .list-two-gift {
-        padding: 10%;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 5%;
+    .list-two-card .two-btn a:hover {
+        border: 2px solid transparent;
     }
 
-    .list-two-gift .gift-info a:first-child {
-        font-size: 24px;
+
+
+    /* list-two-card */
+
+
+
+
+
+
+
+
+    /* list-two-gift  */
+
+    .list-two .list-two-gift .gift-info a:nth-child(1) {
+        font-size: 20px;
     }
 
-    .list-two-gift .gift-info a:last-child {
+    .list-two .list-two-gift .gift-info a:nth-child(2) {
+        font-size: 18px;
+    }
+
+
+    .list-two .shop-btn {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #ffffff;
         font-size: 16px;
     }
 
-
-
-    .list-two-gift .shop-btn {
-        width: 150px;
-        font-size: 16px;
+    .list-two .shop-btn:active {
+        border: 2px solid transparent;
     }
 
-    /* ========== list-two-gift - End ========== */
+    /* list-two-gift  */
+
+
 
 
 
@@ -1900,88 +3197,264 @@ COLLECTION SLIDER - End
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ----------------------
-TRENDY SLIDER - Start
+DEAL OF WEEK    SECTION - Start
 ------------------------- */
 
 
-    .section {
-        padding: 0;
+
+
+
+
+    /* ========== deal-offer - Start =========== */
+
+    .dealofweek .deal-offer {
+        width: 40%;
     }
 
-    .trendy .trendy-sec-head {
-        gap: 12px;
-        margin-bottom: 1.5%;
+    .dealofweek .deal-offer .deal-title {
+        margin-bottom: 0px;
     }
 
-    .trendy .trendy-sec-head h2 {
-        font-size: 24px;
-        gap: 8px;
-    }
-
-    .trendy .trendy-sec-head .trendy-list {
+    .dealofweek .deal-offer .deal-title h5 {
         font-size: 16px;
     }
 
-    .trendy .trendy-sec-head .trendy-list a {
-        text-decoration: none;
-        color: #444444;
+    .dealofweek .deal-offer .deal-collection h1 {
+        font-size: 26px;
     }
 
-
-    /* ---------- SWIPER - START ---------- */
-
-    .trendy .swiper {
-        gap: 5%;
+    .dealofweek .deal-offer .deal-collection h5 {
+        margin-bottom: 20px;
+        font-size: 20px;
     }
 
-    .section.trendy .swiper-pagination {
-        top: 0 !important;
-    }
-
-    /* ---------- SWIPER - End ---------- */
-
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
+    .dealofweek .deal-offer a {
+        padding: 12px;
+        max-width: 100px;
         font-size: 12px;
+        border: 2px solid #fff;
     }
 
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
-        margin-bottom: 2%;
-        font-size: 16px;
+    .separate {
+        font-size: 20px;
     }
 
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
-        font-size: 16px;
+    .offer-time .time .num {
+        font-size: 20px;
     }
 
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
-        font-size: 16px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
-        font-size: 12px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .wish {
-        display: flex;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info img {
-        width: 24px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-image .offer {
+    .offer-time .time .nam {
         font-size: 14px;
     }
 
-    /* ***** product-info ***** */
+    /* ========== deal-offer - End =========== */
+
+
+
+
+
+    /* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+    .dealofweek .swiper.dealofweek-prod {
+        width: 50%;
+        height: 360px;
+        max-height: 360px;
+        width: 50%;
+        margin: 0;
+        max-width: 700px;
+    }
+
+
+
+
+
+    .dealofweek .swiper-wrapper.products-carts {
+        height: 87%;
+    }
+
+    .dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+        width: 100%;
+    }
+
+    .dealofweek .swiper-pagination {
+        --swiper-pagination-bullet-size: 14px;
+        --swiper-pagination-bullet-width: 14px;
+        --swiper-pagination-bullet-height: 14px;
+
+    }
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+    /* ***** product-image-box ***** */
+
+    .product-image-b .prod-buttons .add-btn {
+        padding: 6px;
+        font-size: 14px;
+        width: 80%;
+
+    }
+
+
+
+
+
+
+    .product-image-b .prod-buttons .add-size {
+        font-size: 14px;
+    }
+
+
+
+    .product-image-b .prod-buttons .add-size .btn-size {
+        position: relative;
+        z-index: 20;
+    }
+
+
+
+
+
+
+    .product-image-b .labels a {
+        font-weight: 600;
+        font-size: 10px;
+        padding: 2px;
+    }
+
+
+    /* **** S W I P E R ***** */
+
+
+
+    .product-image-b .swiper .swiper-slide {
+        height: 300px;
+    }
+
+    /* **** S W I P E R ***** */
+
+
+
+
+    /* H O V E R */
+
+
+
+
+    /* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+    .dealofweek .product-boxs .product-info-boxs {
+        height: 17%;
+    }
+
+
+    .product-boxs .product-info-boxs .p-inf {
+        justify-content: space-between !important;
+    }
+
+
+
+    .product-info-boxs .p-inf span {
+        color: #ffffff;
+        font-size: 10px;
+    }
+
+
+
+    .product-info-boxs .p-pric {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        width: 35%;
+    }
+
+
+    .product-info-boxs .p-pric img {
+        width: 18px;
+        height: 18px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+
+
+
+    .product-info-boxs .p-pric .cart-prices .sell-price {
+        font-size: 10px;
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.dis {
+        font-size: 12px;
+
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.sell {
+
+        font-size: 12px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+    /* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
 
 
 
     /* ----------------------
-TRENDY SLIDER - End
+DEAL OF WEEK    SECTION - End
 ------------------------- */
+
+
+
+
+
+
+
 
 
 
@@ -2010,7 +3483,6 @@ BLOG SECTION - Start
     /* ********** SWIPER BLOG -Start ********** */
     .section.blog {
         height: 720px !important;
-        /*del*/
     }
 
     .section.blog .swiper {
@@ -2019,13 +3491,10 @@ BLOG SECTION - Start
         padding-bottom: 50px !important;
         width: 100%;
         margin-top: 5px;
-
         position: static;
         display: flex !important;
         flex-direction: column;
-        /* height: 350px !important; */
         height: 700px !important;
-        /* padding: 0 !important; */
 
     }
 
@@ -2068,11 +3537,9 @@ BLOG SECTION - Start
     .swiper-slide.blog-card {
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
         height: 100%;
         width: 100%;
         gap: 3.5%;
-        /*del*/
     }
 
     /* ********** BLOG İmage - Start ********** */
@@ -2080,7 +3547,6 @@ BLOG SECTION - Start
     .section.blog .blog-image {
         display: flex;
         height: 68%;
-        /* height: 68%; */
     }
 
     .section.blog .blog-image img {
@@ -2102,7 +3568,6 @@ BLOG SECTION - Start
         flex-direction: column;
         height: 25%;
         gap: 8px;
-        /* justify-content: space-between; */
     }
 
     .section.blog .blog-info .blog-head {
@@ -2111,7 +3576,6 @@ BLOG SECTION - Start
     }
 
     .section.blog .blog-info .blog-head .blog-created {
-        /* font-size: 12px; */
         font-size: 14px;
     }
 
@@ -2120,7 +3584,6 @@ BLOG SECTION - Start
     }
 
     .section.blog .blog-info .blog-description {
-        /* font-size: 10px; */
         font-size: 14px;
     }
 
@@ -2190,17 +3653,6 @@ SERVICE SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     /* ----------------------
 DEAL OF WEEK    SECTION - End
 ------------------------- */
@@ -2210,129 +3662,6 @@ DEAL OF WEEK    SECTION - End
     .dealofweek {
         flex-direction: row;
     }
-
-
-
-
-
-
-    /* ========== deal-offer - Start =========== */
-
-    .dealofweek .deal-offer {
-        gap: 30px;
-        width: 50%;
-    }
-
-
-
-    .dealofweek .deal-offer .deal-title .arrow {
-        height: 3px;
-    }
-
-    .dealofweek .deal-offer .deal-title h5 {
-        font-size: 22px;
-    }
-
-    .dealofweek .deal-offer .deal-collection h1 {
-        font-size: 40px;
-        letter-spacing: 10px;
-        word-spacing: 15px;
-    }
-
-    .dealofweek .deal-offer .deal-collection h5 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
-
-    .dealofweek .deal-offer a {
-        max-width: 150px;
-        font-size: 16px;
-    }
-
-
-    .offer-time {
-        gap: 20px;
-    }
-
-    .separate {
-        font-size: 30px;
-    }
-
-    .offer-time .time {
-        gap: 10px;
-        width: 50px;
-    }
-
-    .offer-time .time .num {
-        font-size: 30px;
-    }
-
-    .offer-time .time .nam {
-        font-size: 18px;
-    }
-
-    /* ========== deal-offer - End =========== */
-
-
-
-    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
-
-    .dealofweek .swiper {
-        width: 50%;
-        height: 430px !important;
-    }
-
-    .dealofweek .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-    }
-
-
-
-
-
-    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
-
-
-
-
-
-    /* ========== DEALOFWEEK - Products  - Start =========== */
-
-
-    .dealofweek-prod-info a.dealofweek-basket {
-        font-size: 14px;
-    }
-
-    .dealofweek-wish img {
-        width: 22px;
-    }
-
-
-    .dealofweek-prod-info .offer {
-        font-size: 14px;
-    }
-
-
-
-
-
-
-
-    .dealofweek-prod-info .prod-info {
-        height: 8%;
-    }
-
-
-    .prod-name {
-        font-size: 16px;
-    }
-
-    /* ========== DEALOFWEEK - Products  - End =========== */
-
-
 
 
 
